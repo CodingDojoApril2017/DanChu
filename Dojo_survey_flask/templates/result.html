@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- linking a css style sheet -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <!-- linking a javascript file -->
+    <script type="text/javascript" src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+  </head>
+  <body>
+    Name: {{ name }}<br>
+    Dojo Location: {{ location }}<br>
+    Favorite Language: {{ language }}<br>
+    Comment: {{ comment }}<br>
+    <a href='/'><button>Go back</button></a>
+  </body>
+</html>

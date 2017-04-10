@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- linking a css style sheet -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <!-- linking a javascript file -->
+    <script type="text/javascript" src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+  </head>
+  <body>
+    <h1> Welcome to Dan's Dojo Survey</h1>
+     <!-- Form to be reused -->
+    <form action = '/process' method = 'post'>
+      Your name: <input type = 'text' name = 'name'><br>
+      Dojo Location:
+      <select name = 'location'>
+        <option value="Seattle">Seattle</option>
+        <option value="San Jose">San Jose</option>
+        <option value="Los Angeles">Los Angeles</option>
+      </select><br>
+      Favorite Language:
+      <select name = 'language'>
+        <option value="JavaScript">JavaScript</option>
+        <option value="Python">Python</option>
+        <option value="HTML">HTML</option>
+        <option value="CSS">CSS</option>
+      </select><br>
+      Comment (optional):<br>
+      <textarea name='comment' rows="10" cols="30"></textarea><br>
+      <input type = 'submit' value = "Submit">
+    </form>
+
+  </body>
+</html>
